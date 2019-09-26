@@ -11,21 +11,23 @@ import java.util.HashMap;
  *
  * @author Prathamesh Verlekar
  */
+
 public class TwoSum {
     public static void main(String[] args) {
         
-        System.out.println("Two Sum by Brute Force Approach");
         int[] ret;
+        System.out.println("Two Sum by Brute Force Approach");
         
         ret = twoSumBruteForce(new int[]{10, 15, 3, 7}, 17);
         System.out.println("[" + ret[0] + ", " + ret[1] + "]");
         
         System.out.println("Two Sum by Hashmap approach");
         ret = twoSumOptimized(new int[]{7, 9, 3, 4}, 13);
-        System.out.println("[" + ret[0] + ", " + ret[1] + "]");        
         
+        System.out.println("[" + ret[0] + ", " + ret[1] + "]");        
     }
     
+    //Two loops
     public static int[] twoSumBruteForce(int[] numbers, int sum){
         
         if(numbers == null || numbers.length < 2)
@@ -41,6 +43,7 @@ public class TwoSum {
         return new int[]{0, 0};
     }
     
+    //One loop using HashMap
     public static int[] twoSumOptimized(int[] numbers, int sum){
         
         if(numbers == null || numbers.length < 2)
